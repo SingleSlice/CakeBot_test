@@ -58,5 +58,8 @@ class Embedd :
 
         messaggio = "Welcome " + self.username + " to the help section of CakeBot"
         embed = discord.Embed(title = messaggio )
+        embed.add_field(name="CakeBot Hello", value="CakeBot will greet you :3", inline = False)
+        embed.add_field(name = "Cakebot Omnom someone", value = "CakeBot will omnom a random person", inline = False)
+        embed.add_field(name = "thanks to the friends who helped me testing and building this bot", value = "thanks Makefile_dot_in , Fabetsol , Cookie , BlueSouls ")
 
         return embed
