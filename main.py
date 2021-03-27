@@ -5,7 +5,7 @@ from classi.Easteregg import Eastereggs
 from classi.Embedd import Embedd
 
 intents = discord.Intents.default()
-intents.members = True
+intents .members = True
 
 TOKEN = 'ODI0MjQ5MjU3ODQyMDQ5MDI0.YFsn8A.OYXFJaWDeV4VJeW6LRFkVSWrBrs'
 
