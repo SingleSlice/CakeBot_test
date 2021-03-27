@@ -80,7 +80,7 @@ async def on_ready():
     print(client.user.id)
     print('------')
 
-    await client.change_presence(activity=discord.Game(name="type : CakeBot help"))
+    await client.change_presence(activity=discord.Game(name='type "CakeBot help" for help '))
 
 client.run(TOKEN)
 
