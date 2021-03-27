@@ -53,3 +53,10 @@ class Embedd :
         embed.set_image(url = gGif )
         
         return embed
+    
+    def infoEmbed(self) : 
+
+        messaggio = "Welcome " + self.username + " to the help section of CakeBot"
+        embed = discord.Embed(title = messaggio )
+
+        return embed
