@@ -80,6 +80,8 @@ async def on_ready():
     print(client.user.id)
     print('------')
 
+    await client.change_presence(activity=discord.Game(name="type : CakeBot help"))
+
 client.run(TOKEN)
 
 #await message.channel.send(file=discord.File('prova.txt')) mandare file
