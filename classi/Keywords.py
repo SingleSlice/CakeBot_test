@@ -6,7 +6,8 @@ class Keywords :
         "CakeBot Hello", #1
         "Cakebot Omnom someone", #2
         "CakeBot nice to meet you", #3
-        "CakeBot may i get headpats?" #4
+        "CakeBot may i get headpats?", #4
+        "Cakebot please headpat" #5
     
     ]
 

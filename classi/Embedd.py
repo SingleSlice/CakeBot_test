@@ -43,4 +43,13 @@ class Embedd :
         embed.set_image(url = gGif)
         
         return embed
+
+    def otherHeadpatGifs(self,gif,mention) :
+
+        gGif =gif
+
+        messaggio = self.username + " caresses " + mention + "'s head"
+        embed = discord.Embed(title = messaggio)
+        embed.set_image(url = gGif )
         
+        return embed

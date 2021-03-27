@@ -22,7 +22,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    print("[Ti è arrivato un messaggio]")   
+    print("[Ti è arrivato un messaggio " + "   " + message.guild.name + "]" )   
 
     for parola in Parole.getKeywords() : 
 
@@ -49,6 +49,13 @@ async def on_message(message):
 
                 embedd.setUserName(message.author.name)
                 await message.channel.send(embed = embedd.selfHeadpatGifs(gifs.getRandGifHeadpat()))
+
+            elif parola == Parole.Parole[5] :
+
+                embedd.setUserName(message.author.name)
+                menzione = message.mentions[0].name
+                await message.channel.send(embed = embedd.otherHeadpatGifs( gifs.getRandGifHeadpat(), menzione )) #i dont even know whats going on here
+
 
 
 @client.event
