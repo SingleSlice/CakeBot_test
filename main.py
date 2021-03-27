@@ -56,6 +56,10 @@ async def on_message(message):
                 menzione = message.mentions[0].name
                 await message.channel.send(embed = embedd.otherHeadpatGifs( gifs.getRandGifHeadpat(), menzione )) #i dont even know whats going on here
 
+            elif parola == Parole.Parole[6] :
+
+                await message.channel.send(embed = embedd.infoEmbed())
+            
 
 
 @client.event
