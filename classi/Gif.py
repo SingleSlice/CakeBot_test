@@ -29,7 +29,6 @@ class Gif :
 
         "https://media.giphy.com/media/ARSp9T7wwxNcs/giphy.gif", #0
         "https://media.giphy.com/media/Z7x24IHBcmV7W/giphy.gif", #1
-        "https://tenor.com/6w8H.gif" #2
 
     ]
 
@@ -60,7 +59,7 @@ class Gif :
 
     def getRandGifHeadpat(self) :
 
-        GifNum = 2
+        GifNum = 1
         n = randint(0,GifNum)
 
         return self.listaGifHeadpat[n]
