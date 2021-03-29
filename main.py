@@ -54,7 +54,7 @@ async def on_message(message):
                 try : #try something
                     message.mentions[0].name
 
-                except IndexError as err :#if there is an error (if there is no mention)
+                except :#if there is an error (if there is no mention)
                         
                     await message.channel.send("mention someone please")
 
