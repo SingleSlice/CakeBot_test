@@ -51,10 +51,18 @@ async def on_message(message):
 
             elif parola == Parole.Parole[5] : #CakeBot please headpat
 
-                embedd.setUserName(message.author.name)
-                menzione = message.mentions[0].name
+                try : #try something
+                    message.mention[0].name
 
-                await message.channel.send(embed = embedd.otherHeadpatGifs( gifs.getRandGifHeadpat(), menzione )) #i dont even know whats going on here
+                except: #if there is an error (if there is no mention)
+                        
+                    await message.channel.send("mention someone please")
+
+                else :
+
+                    embedd.setUserName(message.author.name)
+                    menzione = message.mentions[0].name
+                    await message.channel.send(embed = embedd.otherHeadpatGifs( gifs.getRandGifHeadpat(), menzione )) #i dont even know whats going on here
 
             elif parola == Parole.Parole[6] : #CakeBot help
 

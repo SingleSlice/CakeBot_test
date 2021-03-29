@@ -33,10 +33,16 @@ class Gif :
 
     ]
 
+    getlistaGifOmnom = [
+
+        ""
+
+    ]
+
 
     def getGifs(self) :
 
-        return self.listaGif
+        return self.listaGif    
      
     def getRandGif(self) :
 
