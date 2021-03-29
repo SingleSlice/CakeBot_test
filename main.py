@@ -52,9 +52,9 @@ async def on_message(message):
             elif parola == Parole.Parole[5] : #CakeBot please headpat
 
                 try : #try something
-                    message.mention[0].name
+                    message.mentions[0].name
 
-                except: #if there is an error (if there is no mention)
+                except IndexError as err :#if there is an error (if there is no mention)
                         
                     await message.channel.send("mention someone please")
 
