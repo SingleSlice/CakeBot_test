@@ -55,7 +55,16 @@ class Embedd :
             embed.set_image(url = gGif )
         
         return embed
-    
+
+    def getHornyJail(self, pics,mention) :
+
+        messaggio = self.username + " sent " + mention + " to horny jail "
+        embed = discord.Embed(title = messaggio)
+        embed.set_image(url = pics)
+
+        return embed
+
+
     def infoEmbed(self) : 
 
         messaggio = "Welcome " + self.username + " to the help section of CakeBot"

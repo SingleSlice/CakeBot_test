@@ -29,12 +29,19 @@ class Gif :
 
         "https://media.giphy.com/media/ARSp9T7wwxNcs/giphy.gif", #0
         "https://media.giphy.com/media/Z7x24IHBcmV7W/giphy.gif", #1
+        "https://cdn.weeb.sh/images/HyG2kJKD-.gif", #2
 
     ]
 
-    getlistaGifOmnom = [
+    listaGifOmnom = [
 
         ""
+
+    ]
+
+    hornyjail = [
+
+        "https://i.imgur.com/tJlR45p.gif"
 
     ]
 
@@ -63,5 +70,12 @@ class Gif :
         n = randint(0,GifNum)
 
         return self.listaGifHeadpat[n]
+
+    def getHornyJailPics(self) :
+
+        GifNum = 0
+        n= randint(0, GifNum)
+    
+        return self.hornyjail[n]
 
 

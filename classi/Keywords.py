@@ -8,7 +8,8 @@ class Keywords :
         "CakeBot nice to meet you", #3
         "CakeBot may i get headpats?", #4
         "CakeBot please headpat", #5
-        "CakeBot help" #6
+        "CakeBot help", #6
+        "CakeBot give a ticket for horny jail to" #7
     
     ]
 
