@@ -36,9 +36,20 @@ async def on_message(message):
                 embed.set_image(url = gifs.getRandGif())
                 await message.channel.send(embed=embed)
             
-            elif parola == Parole.Parole[2] : #Cakebot Omnom someone
+            elif parola == Parole.Parole[2] : #CakeBot omnom
 
-                await message.channel.send('Omnom')
+                try :
+
+                    message.mentions[0].name 
+
+                except :
+
+                    message.channel.send("need to mention someone")
+                
+                else :
+
+                    await message.channel.send(embed = embedd.getOmnomGifs(gifs.getRandGifOmnom(), message.mentions[0].name))
+                    
             
             elif parola == Parole.Parole[3] : #CakeBot nice to meet you
 
