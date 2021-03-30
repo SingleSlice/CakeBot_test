@@ -48,6 +48,7 @@ async def on_message(message):
                 
                 else :  
 
+                    embedd.setUserName(message.author.name)
                     await message.channel.send(embed = embedd.getOmnomGifs(gifs.getRandGifOmnom(), message.mentions[0].name))
 
             

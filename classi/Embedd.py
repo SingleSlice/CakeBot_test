@@ -83,6 +83,8 @@ class Embedd :
         embed.add_field(name = "CakeBot send me a cute gif", value = "CakeBot will send a cute random gif", inline = False)
         embed.add_field(name = "CakeBot may i get headpats?", value = "CakeBot will send an headpat gif for yourself", inline = False)
         embed.add_field(name = "CakeBot please headpat", value = "CakeBot will send an headpat gif , but only if you mention someone", inline = False)
+        embed.add_field(name = "CakeBot omnom", value = "CakeBot will send an omnom gif to the user you mentioned", inline = False )
+        embed.add_field(name = "CakeBot give a ticket for horny jail to", value = "CakeBot will send a random 'horny jail ticket' to the user you mentioned")
         embed.add_field(name = "CakeBot help", value = "CakeBot will send this message", inline = False)
         embed.add_field(name = "thanks to the friends who helped me testing and building this bot", value = "thanks Makefile_dot_in , Fabetsol , Cookie , BlueSouls ")
 
