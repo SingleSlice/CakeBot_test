@@ -35,7 +35,7 @@ class Gif :
 
     listaGifOmnom = [
 
-        "" #0
+        "https://media.giphy.com/media/WW3NSMgcR4ZGM/giphy.gif" #0
 
     ]
 
