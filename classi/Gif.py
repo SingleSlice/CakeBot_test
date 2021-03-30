@@ -35,13 +35,13 @@ class Gif :
 
     listaGifOmnom = [
 
-        ""
+        "" #0
 
     ]
 
     hornyjail = [
 
-        "https://i.imgur.com/tJlR45p.gif"
+        "https://i.imgur.com/tJlR45p.gif" #0
 
     ]
 
@@ -54,8 +54,13 @@ class Gif :
 
         GifNum = 7
         n = randint(0,GifNum)
-
         return self.listaGif[n]
+
+    def getRandGifOmnom(self) :
+
+        GifNum = 0
+        n = randint(0, GifNum)
+        return self.listaGifOmnom[n]
 
     def getRandGifBenvenuto(self) : 
 

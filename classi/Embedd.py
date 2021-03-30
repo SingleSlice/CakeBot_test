@@ -34,6 +34,14 @@ class Embedd :
 
         return benvenuto
 
+    def getOmnomGifs(self,gif,mention) :
+
+        messaggio = self.username + " omnoms " + mention
+        embed = discord.Embed( title = messaggio )
+        embed.set_image(url = gif )
+
+        return embed
+
     def selfHeadpatGifs(self,gif) :
 
         gGif = gif

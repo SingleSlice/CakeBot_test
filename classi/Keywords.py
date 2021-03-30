@@ -4,7 +4,7 @@ class Keywords :
 
         "CakeBot send me a cute gif", #0
         "CakeBot Hello", #1
-        "Cakebot Omnom someone", #2
+        "CakeBot omnom", #2
         "CakeBot nice to meet you", #3
         "CakeBot may i get headpats?", #4
         "CakeBot please headpat", #5

@@ -44,12 +44,12 @@ async def on_message(message):
 
                 except :
 
-                    message.channel.send("need to mention someone")
+                    await message.channel.send("need to mention someone")
                 
-                else :
+                else :  
 
                     await message.channel.send(embed = embedd.getOmnomGifs(gifs.getRandGifOmnom(), message.mentions[0].name))
-                    
+
             
             elif parola == Parole.Parole[3] : #CakeBot nice to meet you
 
