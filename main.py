@@ -90,6 +90,7 @@ async def on_message(message):
                     await message.channel.send("mention someone please")
 
                 else :
+                    embedd.setUserName(message.author.name)
                     await message.channel.send(embed = embedd.getHornyJail(gifs.getHornyJailPics(), message.mentions[0].name))
 
 
