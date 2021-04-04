@@ -56,11 +56,9 @@ class Embedd :
 
         gGif =gif
 
-        if mention != "" :
-
-            messaggio = self.username + " caresses " + mention + "'s head"
-            embed = discord.Embed(title = messaggio)
-            embed.set_image(url = gGif )
+        messaggio = self.username + " caresses " + mention + "'s head"
+        embed = discord.Embed(title = messaggio)
+        embed.set_image(url = gGif )
         
         return embed
 

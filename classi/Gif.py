@@ -41,7 +41,9 @@ class Gif :
 
     hornyjail = [
 
-        "https://i.imgur.com/tJlR45p.gif" #0
+        "https://i.imgur.com/tJlR45p.gif", #0
+        "https://i.imgur.com/qrvA9c1.jpg", #1
+        "https://i.imgur.com/XX1sbiG.gif" #2
 
     ]
 
@@ -78,7 +80,7 @@ class Gif :
 
     def getHornyJailPics(self) :
 
-        GifNum = 0
+        GifNum = 2
         n= randint(0, GifNum)
     
         return self.hornyjail[n]
