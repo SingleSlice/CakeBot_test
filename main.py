@@ -3,6 +3,7 @@ from classi.Keywords import Keywords
 from classi.Gif import Gif
 from classi.Easteregg import Eastereggs
 from classi.Embedd import Embedd
+from classi.UserProfile import UserProfile
 
 intents = discord.Intents.default()
 intents .members = True
@@ -14,6 +15,7 @@ Parole = Keywords()
 gifs = Gif()
 embed=discord.Embed()
 embedd = Embedd()
+profilo = UserProfile()
 
 @client.event
 
@@ -92,6 +94,11 @@ async def on_message(message):
                 else :
                     embedd.setUserName(message.author.name)
                     await message.channel.send(embed = embedd.getHornyJail(gifs.getHornyJailPics(), message.mentions[0].name))
+            
+            elif parola == Parole.Parole[8] : #CakeBot list my profile
+
+                print("profile request")
+                profilo.saveUserDatabase()
 
 
 @client.event
@@ -102,6 +109,7 @@ async def  on_member_join(member) :
     embedd.setUserName(member.name)
     print(embedd.getUserName())
     await member.send(embed = embedd.welcomeMessage(gifs.getRandGifBenvenuto()))
+    profilo.saveUserDatabase()
 
 
 @client.event
@@ -110,6 +118,7 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
+    profilo.loadUserDatabase()
 
     await client.change_presence(activity=discord.Game(name='type "CakeBot help" for help '))
 
