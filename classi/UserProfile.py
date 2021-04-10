@@ -11,7 +11,11 @@ class UserProfile :
 
         if not ID in self.profili :
 
-            self.profili[ID] = {}
+            self.profili[ID] = {
+
+                "cuteness ammount" : 0,
+
+            }
 
 
     def getUserProfile(self) :
@@ -20,7 +24,7 @@ class UserProfile :
 
     def saveUserDatabase(self) :
 
-        print("dumped on the toilet")
+        print("dumped")
         with open("database.pkl","wb") as d :
 
             pickle.dump(self.profili,d)

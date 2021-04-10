@@ -121,6 +121,7 @@ async def on_ready():
     print('------')
     profilo.loadUserDatabase()
 
+
     await client.change_presence(activity=discord.Game(name='type "CakeBot help" for help '))
 
 client.run(TOKEN)
