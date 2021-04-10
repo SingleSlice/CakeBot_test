@@ -99,7 +99,8 @@ async def on_message(message):
 
                 print("profile request")
                 profilo.saveUserDatabase()
-
+                print(profilo.getUserProfile())
+                profilo.NewUserProfile(message.author.id)
 
 @client.event
 

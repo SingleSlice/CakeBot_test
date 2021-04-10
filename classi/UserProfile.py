@@ -3,12 +3,16 @@ class UserProfile :
 
     profili = {}
 
-    def NewUserProfile(self,discordID, discordName) : 
+    def NewUserProfile(self,discordID) : 
 
         print("new user profile")
 
         ID = discordID
-        nickname = discordName
+
+        if not ID in self.profili :
+
+            self.profili[ID] = {}
+
 
     def getUserProfile(self) :
         
@@ -27,3 +31,4 @@ class UserProfile :
         with open("database.pkl","rb") as d :
 
             self.profili = pickle.load(d)
+    
