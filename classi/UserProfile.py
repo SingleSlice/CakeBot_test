@@ -5,14 +5,16 @@ class UserProfile :
 
     def NewUserProfile(self,discordID) : 
 
-        print("new user profile")
+        
 
         ID = discordID
 
         if not ID in self.profili :
 
+            print("new user profile")
             self.profili[ID] = {
 
+                "ID discord" : ID ,
                 "cuteness ammount" : 0,
 
             }

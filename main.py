@@ -97,10 +97,10 @@ async def on_message(message):
             
             elif parola == Parole.Parole[8] : #CakeBot list my profile
 
-                print("profile request")
                 profilo.saveUserDatabase()
-                print(profilo.getUserProfile())
                 profilo.NewUserProfile(message.author.id)
+                await message.channel.send(embed = embedd.getUserProfile(message.author.id,profilo.profili))
+                print(profilo.getUserProfile())
 
 @client.event
 

@@ -87,3 +87,12 @@ class Embedd :
         embed.add_field(name = "thanks to the friends who helped me testing and building this bot", value = "thanks Makefile_dot_in , Fabetsol , Cookie , BlueSouls ")
 
         return embed
+
+    def getUserProfile(self, discordID, profiless) :
+
+        profiles = profiless
+        ID = discordID
+        titolo = str(profiles[ID].get("ID discord")) + "'s profile :o"
+        embed = discord.Embed(title = titolo)
+
+        return embed
