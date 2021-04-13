@@ -99,7 +99,7 @@ async def on_message(message):
 
                 profilo.saveUserDatabase()
                 profilo.NewUserProfile(message.author.id)
-                await message.channel.send(embed = embedd.getUserProfile(message.author.id,profilo.profili))
+                await message.channel.send(embed = embedd.getUserProfile(message.author.id, profilo.cuteness, message.author.name))
                 print(profilo.getUserProfile())
 
 @client.event

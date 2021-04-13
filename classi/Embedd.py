@@ -88,11 +88,17 @@ class Embedd :
 
         return embed
 
-    def getUserProfile(self, discordID, profiless) :
+    def getUserProfile(self, discordID, profiless, nickname) :
 
-        profiles = profiless
         ID = discordID
-        titolo = str(profiles[ID].get("ID discord")) + "'s profile :o"
+        name = nickname
+        profiles = profiless
+        titolo = name + "'s profile"
         embed = discord.Embed(title = titolo)
+
+        embed.add_field(name="Cuteness ammount :", value= profiles[ID].get("cuteness ammount"))
+
+        print(name)
+        print(ID)
 
         return embed

@@ -1,7 +1,7 @@
 import pickle
 class UserProfile : 
 
-    profili = {}
+    cuteness = {}
 
     def NewUserProfile(self,discordID) : 
 
@@ -9,32 +9,31 @@ class UserProfile :
 
         ID = discordID
 
-        if not ID in self.profili :
+        if not ID in self.cuteness :
 
             print("new user profile")
-            self.profili[ID] = {
+            self.cuteness[ID] = {
 
                 "ID discord" : ID ,
                 "cuteness ammount" : 0,
 
             }
 
-
     def getUserProfile(self) :
         
-        return self.profili
+        return self.cuteness
 
     def saveUserDatabase(self) :
 
         print("dumped")
         with open("cuteness count.pkl","wb") as d :
 
-            pickle.dump(self.profili,d)
+            pickle.dump(self.cuteness,d)
     
     def loadUserDatabase(self) :
 
         print("loaded")
         with open("cuteness count.pkl","rb") as d :
 
-            self.profili = pickle.load(d)
+            self.cuteness = pickle.load(d)
     
