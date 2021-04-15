@@ -36,4 +36,7 @@ class UserProfile :
         with open("cuteness count.pkl","rb") as d :
 
             self.cuteness = pickle.load(d)
-    
+        
+    def addCuteness(self, ID, ammount) :
+        print("added cuteness")
+        
