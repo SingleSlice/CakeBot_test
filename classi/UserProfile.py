@@ -3,6 +3,8 @@ class UserProfile :
 
     cuteness = {}
 
+    databasePath = "D:\\programmi\\programmi miei\\python\\SingleSliceOfRam\\cuteness count.pkl"
+
     def NewUserProfile(self,discordID) : 
 
         ID = discordID
@@ -24,14 +26,14 @@ class UserProfile :
     def saveUserDatabase(self) :
 
         print("dumped")
-        with open("cuteness count.pkl","wb") as d :
+        with open(self.databasePath,"wb") as d :
 
             pickle.dump(self.cuteness,d)
     
     def loadUserDatabase(self) :
 
         print("loaded")
-        with open("cuteness count.pkl","rb") as d :
+        with open(self.databasePath,"rb") as d :
 
             self.cuteness = pickle.load(d)
         

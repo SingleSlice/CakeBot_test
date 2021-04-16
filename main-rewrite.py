@@ -1,5 +1,6 @@
 import discord
 import time
+import atexit
 from discord.ext import commands
 from classi.Keywords import Keywords
 from classi.Gif import Gif
@@ -19,7 +20,14 @@ intents = discord.Intents.default()
 intents.members = True
 client = commands.Bot(command_prefix="🍰", intents = intents)
 
+#exit thingy , it works , dont touch it
 
+def exit_handler():
+    profilo.saveUserDatabase()
+
+atexit.register(exit_handler)
+
+#exit thingy , it works , dont touch it
 
 @client.command(name = "gif")
 
@@ -52,7 +60,7 @@ async def  on_member_join(member) :
     embedd.setUserName(member.name)
     print(embedd.getUserName())
     await member.send(embed = embedd.welcomeMessage(gifs.getRandGifBenvenuto()))
-    profilo.saveUserDatabase()
+    profilo.NewUserProfile(member.id)
 
 @client.event
 async def on_ready() :
@@ -61,5 +69,6 @@ async def on_ready() :
     print(" bot online")
     print("------------")
     profilo.loadUserDatabase()
+    
 
 client.run(TOKEN)
