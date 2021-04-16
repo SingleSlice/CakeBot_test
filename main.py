@@ -101,7 +101,6 @@ async def on_message(message):
                 profilo.NewUserProfile(message.author.id)
                 await message.channel.send(embed = embedd.getUserProfile(message.author.id, profilo.cuteness, message.author.name))
                 print(profilo.getUserProfile())
-
 @client.event
 
 async def  on_member_join(member) :

@@ -5,8 +5,6 @@ class UserProfile :
 
     def NewUserProfile(self,discordID) : 
 
-        
-
         ID = discordID
 
         if not ID in self.cuteness :
@@ -38,5 +36,6 @@ class UserProfile :
             self.cuteness = pickle.load(d)
         
     def addCuteness(self, ID, ammount) :
-        print("added cuteness")
         
+        print("added cuteness")
+        self.cuteness[ID]["cuteness ammount"] += ammount

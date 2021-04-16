@@ -10,7 +10,8 @@ class Keywords :
         "CakeBot please headpat", #5
         "CakeBot help", #6
         "CakeBot give a ticket for horny jail to", #7
-        "CakeBot list my profile" #8
+        "CakeBot list my profile", #8
+        "CakeBot add cuteness"
     
     ]
 
