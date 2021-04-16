@@ -27,7 +27,7 @@ class Embedd :
 
         Ggif = gif
 
-        messaggio = "Welcome " + self.username + " in " + self.guildName
+        messaggio = "Welcome " + self.username + " to " + self.guildName
 
         benvenuto = discord.Embed(title = messaggio )
         benvenuto.set_image(url = Ggif)
