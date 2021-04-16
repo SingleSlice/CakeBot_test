@@ -41,8 +41,9 @@ async def showProfile( ctx ) :
 
     profilo.NewUserProfile(ctx.author.id)
     await ctx.channel.send(embed = embedd.getUserProfile(ctx.author.id, profilo.cuteness, ctx.author.name))
+    print(profilo.getUserProfile())
 
-@client.event
+@client.event #message handler uwu
 
 async def on_message(message) :
 

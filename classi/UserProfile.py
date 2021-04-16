@@ -15,9 +15,11 @@ class UserProfile :
             self.cuteness[ID] = {
 
                 "ID discord" : ID ,
-                "cuteness ammount" : 0,
+                "cuteness ammount" : 0
 
             }
+        
+            self.saveUserDatabase()
 
     def getUserProfile(self) :
         
@@ -37,7 +39,3 @@ class UserProfile :
 
             self.cuteness = pickle.load(d)
         
-    def addCuteness(self, ID, ammount) :
-        
-        print("added cuteness")
-        self.cuteness[ID]["cuteness ammount"] += ammount
