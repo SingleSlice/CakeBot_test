@@ -11,7 +11,7 @@ class UserProfile :
 
         if not ID in self.cuteness :
 
-            print("new user profile")
+            print("new user profile [cuteness]")
             self.cuteness[ID] = {
 
                 "ID discord" : ID ,
@@ -38,4 +38,8 @@ class UserProfile :
         with open(self.databasePath,"rb") as d :
 
             self.cuteness = pickle.load(d)
+
+    def addSelfCuteness( self, ID ) :
+
+        self.cuteness[ID]["cuteness ammount"] += 1
         

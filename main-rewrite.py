@@ -29,6 +29,8 @@ atexit.register(exit_handler)
 
 #exit thingy , it works , dont touch it
 
+#start of commands
+
 @client.command(name = "gif")
 
 async def cutegif( ctx ) :
@@ -43,15 +45,29 @@ async def showProfile( ctx ) :
     await ctx.channel.send(embed = embedd.getUserProfile(ctx.author.id, profilo.cuteness, ctx.author.name))
     print(profilo.getUserProfile())
 
+@client.command(name = "cuteness")
+
+#end of commands
+
+
+
 @client.event #message handler uwu
 
 async def on_message(message) :
 
     if message.author.bot: return #blocks bot messages
 
-    print("[nuovo messaggio] " + time.strftime("[%H:%M]")) #prints message infos
+    print("[nuovo messaggio] " + "["+ message.guild.name + "] " + time.strftime("[%H:%M]")) #prints message infos
+
+    profilo.NewUserProfile(message.author.id)
+
+    if "im cute" in message.content :
+
+        profilo.addSelfCuteness(message.author.id)
 
     await client.process_commands(message) #makes commands work 
+
+
 
 @client.event
 
@@ -70,6 +86,5 @@ async def on_ready() :
     print(" bot online")
     print("------------")
     profilo.loadUserDatabase()
-    
 
 client.run(TOKEN)
