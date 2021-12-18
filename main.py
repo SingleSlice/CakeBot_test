@@ -8,7 +8,7 @@ from classi.UserProfile import UserProfile
 intents = discord.Intents.default()
 intents .members = True
 
-TOKEN = 'ODI0MjQ5MjU3ODQyMDQ5MDI0.YFsn8A.OYXFJaWDeV4VJeW6LRFkVSWrBrs'
+TOKEN = ''
 
 client = discord.Client(intents = intents)
 Parole = Keywords()
